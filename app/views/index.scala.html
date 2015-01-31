@@ -1,0 +1,21 @@
+@(item: List[Item])
+
+  @main("World's Rarest Items") {
+    <h2>Items Currently For Auction</h2>
+    <table>
+      <tr><th>Item Number</th><th>Name</th><th>Highest Bid</th><th>Seller</th><th>Status</th></tr>
+      @for(i <- item){
+        <tr><td>@i.id</td><td>@i.uniqueName</td><td>$@i.highestBid</td><td>@i.auctioneer</td>
+          @if(i.state == 0) {
+            <td>Open</td>
+          }
+          @if(i.state == 1) {
+            <td>Closed</td>
+          }
+          @if(i.state == -1) {
+            <td>Failed</td>
+          }
+        </tr>
+      }
+    </table>
+  }
