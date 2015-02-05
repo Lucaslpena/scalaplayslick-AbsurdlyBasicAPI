@@ -37,7 +37,7 @@
 		{
 			"id": "7e86057a-d93b-7adb-e7dd-30c23f2693be",
 			"headers": "Content-Type: application/json\n",
-			"url": "localhost:9000/items/0/bid",
+			"url": "localhost:9000/items/1/bid",
 			"preRequestScript": "",
 			"pathVariables": {},
 			"method": "POST",
